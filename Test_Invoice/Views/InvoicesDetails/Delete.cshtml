@@ -1,0 +1,57 @@
+﻿@model Test_Invoice.Models.InvoicesDetail
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>InvoicesDetail</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InvoiceDetailQuantity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InvoiceDetailQuantity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InvoiceDetailPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InvoiceDetailPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InvoiceDetailTotalItbis)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InvoiceDetailTotalItbis)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InvoiceDetailSubtotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InvoiceDetailSubtotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InvoiceDetailTotal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InvoiceDetailTotal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Customer.InvoiceId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="InvoiceDetailId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
