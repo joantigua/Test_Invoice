@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Test_Invoice.Models;
 
 namespace Test_Invoice.Models;
 
